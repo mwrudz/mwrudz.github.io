@@ -1,27 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Matthew Rudzinski</title>
-  <meta charset="utf-8"/>
-  <link rel="stylesheet" type="text/css" href="main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #FD9A02;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 36px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #C60006;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #E08689;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+}
+</style>
 </head>
 <body>
-  <div class="container">
-    <div class="nav">
-      <h2>Menu</h2>
-      <ul>
-        <li>Bio</li>
-        <li>Resume</li>
-        <li>Projects</li>
-        <li>Contact Me</li>
-      </ul>
-    </div>
-    <div class="main">
-      <h1>Matthew Rudzinski</h1>
-      <h3>Mechanical Engineer from Virginia Tech</h3>
-      <p>I'm a student in Mechanical Engineering at Virginia Tech and I'm searching for employment post-graduation in May of 2019.</p>
-     
-    </div>
-  </div>
+<center>
+<font size="72">Matthew W. Rudzinski</font>
+<p>Click on the buttons inside the tabbed menu:</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'Bio')">Bio</button>
+  <button class="tablinks" onclick="openTab(event, 'Resume')">Resume</button>
+  <button class="tablinks" onclick="openTab(event, 'Projects')">Projects</button>
+  <button class="tablinks" onclick="openTab(event, 'Contact Me')">Contact Me</button>
+</div>
+
+<div id="Bio" class="tabcontent">
+  <font size="24">About Me</font>
+  <p>I'm a student in Mechanical Engineering at Virginia Tech. I'm expecting to graduate in May of 2019. I've been lucky enough to get a broad range of experience in mechanical engineering related fields across multiple co-ops and internships.</p>
+</div>
+
+<div id="Resume" class="tabcontent">
+  <font size="24">Resume</font>
+  <p>Download my <a href="resume.pdf" download> resume</a></p>
+</div>
+
+<div id="Projects" class="tabcontent">
+  <font size="24">Class Projects</font>
+  <p> Here are class projects</p>
+  <font size="24">Personal Projects</font>
+  <p> Here are some personal projects</p>
+</div>
+
+<div id="Contact Me" class="tabcontent">
+  <font size="24">Contact me at:</font>
+  <p>mwrudz@gmail.com or (703)-555-1250</p>
+</div>
+</center>
+<script>
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+   
 </body>
-</html>
+</html> 
