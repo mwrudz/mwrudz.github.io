@@ -20,7 +20,7 @@ body {font-family: Arial;}
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
-  transition: 0.3s;
+  transition: 0.5s;
   font-size: 36px;
 }
 
@@ -50,7 +50,7 @@ body {font-family: Arial;}
     <h1 class="w3-xxlarge w3-text-white">Matthew W. Rudzinski</h1>
   </div>
 </header>
-<center>
+
 <div class="tab">
   <button class="tablinks w3-text-white" onclick="openTab(event, 'Bio')">Bio</button>
   <button class="tablinks w3-text-white" onclick="openTab(event, 'Resume')">Resume</button>
@@ -60,32 +60,46 @@ body {font-family: Arial;}
 </div>
 
 <div id="Bio" class="tabcontent">
+  <center>
   <font size="24">About Me</font>
+  </center>
   <p>I'm a student in Mechanical Engineering at Virginia Tech. I'm expecting to graduate in May of 2019. I've been lucky enough to get a broad range of experience in mechanical engineering related fields across multiple co-ops and internships.</p>
 </div>
 
 <div id="Resume" class="tabcontent">
+  <center>
   <font size="24">Resume</font>
+  </center>
   <p>Download my <a href="resume.pdf" download> resume</a></p>
 </div>
 
 <div id="Projects" class="tabcontent">
+  <center>
   <font size="24">Class Projects</font>
+  </center>
   <p> Here are class projects</p>
+  <center>
   <font size="24">Personal Projects</font>
+  </center>
   <p> Here are some personal projects</p>
 </div>
 
 <div id="Classes" class="tabcontent">
+  <center>
   <font size="24">Grades Compared to Average:</font>
+  </center>
   <p>Download my <a href="Grade Comparison.xlsx" download> grade comparisons</a> last updated to the Spring of 2018</p>
+  <center>
   <font size="24">Completed Classes:</font>
+  </center>
   <p>insert here</p>
 </div>
 
 <div id="Contact Me" class="tabcontent">
+  <center>
   <font size="24">Contact me at:</font>
   <p>mwrudz@gmail.com or (703)-555-1250</p>
+  </center>
 </div>
 
 
@@ -93,11 +107,16 @@ body {font-family: Arial;}
 function openTab(evt, tabName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
+  
+  for (i = 0; i < tabcontent.length; i++) 
+  {
     tabcontent[i].style.display = "none";
   }
+  
   tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
+  
+  for (i = 0; i < tablinks.length; i++) 
+  {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
   document.getElementById(tabName).style.display = "block";
@@ -105,6 +124,5 @@ function openTab(evt, tabName) {
 }
 </script>
 
-</center>
 </body>
 </html> 
